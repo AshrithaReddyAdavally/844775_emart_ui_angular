@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Bootstrap Card</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <style>
+        .card-width {
+            width: 300px;
+
+        }
+    </style>
+</head>
+<div class="container">
+    <div class="row">
+
+        <div class="col"></div>
+        <div class="col sm-12 md-6 lg-6">
+            <div class="small text-center text-danger">{{errorMessage}}</div>
+            <div class="card card-width mt-5">
+                <div class="card-header">
+                    Login
+                </div>
+                <div class="card-body">
+                   <!---- Sign in as:
+                    <div class="form-check-inline">
+                        <label for='buyer' class="form-check-label">
+                            <input type="radio" class="form-check-input" name="radiosign" id='buyer'
+                                [(ngModel)]='sign'>Seller
+                        </label>
+                    </div>
+                    <div class="form-check-inline">
+                        <label for='seller' class="form-check-label">
+                            <input type="radio" class="form-check-input" name="radiosign" id='seller'
+                                [(ngModel)]='sign'>Buyer
+                        </label>
+                    </div>
+
+                -->
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-4">
+                            <label for='buyer'>Login As</label>
+                        </div>
+                        <div class="col-8">
+                            <input type="radio" name="login" id='buyer' value="buyer" [(ngModel)]="sign">Buyer
+                            <input type="radio" name="login" id='seller' value="seller" [(ngModel)]="sign">Seller
+                        </div>
+                    </div>
+                </div>
+
+
+                    <div class="form-group mt-3">
+                        <label for="username">User Name</label>
+                        <input type="text" class="form-control" placeholder="Enter username" id="username"
+                            [(ngModel)]='username'>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" class="form-control" placeholder="Enter Password" id="password"
+                            [(ngModel)]='password'>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" (click)="validate()">Submit</button>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <div class="col"></div>
+</div>
+
+
+</html>
